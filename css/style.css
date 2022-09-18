@@ -1,0 +1,255 @@
+:root {
+    --background-bannerLeft: #ffd891;    
+    --background-bannerRight: #b9ffb9;
+    --background-default: #f5f5f5;
+    --color-font-default: #4d4d4d;
+    --color-font-azul: #3c3a9e;
+    --color-font-azulClaro: #7574da;
+    --color-font-azulMuitoClaro: #bfbef8;
+}
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns:auto;
+    grid-template-areas: 
+    "menu" "menu" "menu" 
+    "bannerLeft" "conteudo" "bannerRight"
+    "footer" "footer" "footer";
+}
+
+/* AREA MENU */
+.logo {
+    display: block;
+    width: 50px;
+    margin: auto;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    background-color: var(--color-font-default);
+    border-bottom: solid 3px var(--color-font-azul);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navegacao {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.navegacao a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--background-default);
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px var(--color-font-default);
+    padding: 15px;
+}
+
+.navegacao a:hover {
+    background-color: var(--color-font-azul);
+    
+    box-shadow: 2px 2px black;
+
+}
+
+/* AREA CONTEUDO HOME */
+
+.autor {
+    font-size: 0.6em;
+    font-weight: bold;
+    text-align: end;
+}
+
+.conteudo {
+    min-height: 500px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "bannerLeft" "home" "bannerRight";
+}
+
+.conteudoMobile {
+    display: none;
+}
+
+.bannerLeft {
+    background-color: var(--background-bannerLeft);
+    min-height: 500px;
+}
+
+.bannerRight {
+    background-color: var(--background-bannerRight);
+    min-height: 500px;
+}
+
+.home {
+    display: block;
+    justify-content: center;
+    margin: 15px;
+}
+
+.quadro {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.bloco {
+    display: grid;
+    grid-template-columns: 100px auto 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.imagemArtigo {
+    background-color: var(--color-font-azul);
+    width: 100px;
+    height: 100px;
+}
+
+.descricao {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+    background-color: var(--color-font-azulMuitoClaro);
+    overflow: hidden;
+}
+
+.descricao span {
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+
+.botao {
+    display: flex;
+    width: 100px;
+    height: 100px;
+
+}
+
+.botao button {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-font-azulClaro);
+    border: none;
+    font-size: 1.3em;
+}
+
+.botao button:hover {
+    color: var(--background-default);
+    background-color: var(--color-font-azul);
+    cursor: pointer;
+}
+
+.titulo {
+    padding: 15px;
+    margin: 0;
+    background-color: var(--color-font-azulClaro);
+}
+
+
+
+
+/* AREA RODAPE */
+
+.rodape {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-default);
+    font-size: 0.8em;
+    height: 50px;
+    background-color: var(--color-font-default);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .botao {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        min-width: 275px;
+    } 
+
+    .imagemArtigo {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        min-width: 275px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .conteudo {
+        display: none;
+    }
+
+    .conteudoMobile {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .bannerLeft {
+        display: none;
+    }
+
+    .bannerRight {
+        display: none;
+    }
+
+    .imagemArtigo {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        min-width: 600px;
+    }
+
+    .bannerImagem {
+        background-color: var(--background-bannerRight);
+    }
+
+    .bannerBotao {
+        background-color: var(--background-bannerRight);
+    }
+
+    .quadro {
+        display: block;
+    }
+
+    .bloco {
+        display: block;
+        height: auto;
+        width: auto;
+    }
+
+    .botao {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        min-width: 600px;
+    }
+
+    .descricao {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+        width: auto;
+    }
+
+    .rodape {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
