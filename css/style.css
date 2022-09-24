@@ -1,10 +1,10 @@
 :root {
     --background-bannerLeft: #ffd891;
     --background-bannerRight: #b9ffb9;
-    --background-default: #f5f5f5;
+    --background-default: #DCE8F2;
     --color-font-default: #4d4d4d;
-    --color-font-azul: #3c3a9e;
-    --color-font-azulClaro: #7574da;
+    --color-font-azul: #3E5159;
+    --color-font-azulClaro: #7686A6;
     --color-font-azulMuitoClaro: #bfbef8;
 }
 
@@ -21,6 +21,15 @@ body {
         "menu""menu""menu"
         "bannerLeft""conteudo""bannerRight"
         "footer""footer""footer";
+}
+h1 {
+    color: var(--background-default);
+    font-size: 1.5em;
+    text-shadow: 2px 2px black;
+}
+
+h2 {
+    margin: 15px;
 }
 
 /* AREA MENU */
@@ -137,7 +146,6 @@ body {
     display: flex;
     width: 100px;
     height: 100px;
-
 }
 
 .botao button {
@@ -159,9 +167,6 @@ body {
     margin: 0;
     background-color: var(--color-font-azulClaro);
 }
-
-
-
 
 /* AREA RODAPE */
 
