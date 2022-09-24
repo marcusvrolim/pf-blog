@@ -114,6 +114,7 @@ body {
 }
 
 .imagemArtigo {
+    display: flex;
     background-color: var(--color-font-azul);
     width: 100px;
     height: 100px;
@@ -175,14 +176,13 @@ body {
     background-color: var(--color-font-default);
 }
 
-.footerPost {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    background-color: var(--color-font-azulMuitoClaro);
-}
 
-@media only screen and (max-width: 768px ) {
+
+@media only screen and (max-width: 992px) {
+
+    body {
+        background-color: var(--background-default);
+    }
 
     .conteudo {
         display: none;
@@ -210,14 +210,20 @@ body {
     }
 
     .quadro {
-        display: block;
+        height: auto;
     }
 
     .botao {
         display: flex;
         width: 100px;
         height: 100px;
-        
+    }
+
+    .footerPost {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        background-color: var(--color-font-azulMuitoClaro);
     }
 
     .descricao {
