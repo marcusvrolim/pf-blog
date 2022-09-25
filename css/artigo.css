@@ -79,12 +79,6 @@ h2 {
 }
 
 /* AREA MENU */
-.logo {
-    display: block;
-    width: 50px;
-    margin: auto;
-}
-
 .menu {
     display: grid;
     grid-template-columns: auto;
@@ -263,6 +257,7 @@ iframe {
         display: grid;
         grid-template-columns: auto;
         width: auto;
+        font-size: 1.4em;
     }
 
     .desktop {
