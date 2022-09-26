@@ -229,6 +229,19 @@ h2 {
         height: 100px;
     }
 
+    .imagemArtigo {
+        border-radius: 20%;
+        margin-inline: 20px;
+    }
+
+    .imagemArtigo img {
+        border-radius: 20%;
+    }
+
+    .botao button{
+        border-radius: 20%;
+    }
+
     .footerPost {
         display: flex;
         justify-content: center;
